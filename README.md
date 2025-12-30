@@ -71,9 +71,14 @@ This command will coordinate the modules, run both Single-Day and 30-Day analyse
 These outcomes are realistic and consistent with financial literature
 and the Efficient Market Hypothesis.
 
+## 📄 Full Documentation
+
+For a detailed explanation of the mathematical models (Nelson-Siegel & NSS), the optimization methodology, and the financial interpretation of the results, please refer to the full thesis document:
+
+**[Read the Full Thesis (PDF)](thesis_damico.pdf)**
+
 # Author
 Marco D'Amico
 University of Rome "Tor Vergata"
 Bachelor of Science in Business Administration and Economics
 Thesis in Mathematical Finance
-
