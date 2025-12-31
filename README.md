@@ -1,6 +1,8 @@
 # TERM STRUCTURE ESTIMATION: A PARAMETRIC APPROACH BASED ON NELSON SIEGEL MODELS
 **Marco D'Amico — Bachelor Thesis Project**
 
+**Project Porting:** This codebase represents a complete refactoring and translation of the original thesis work, initially developed in **MATLAB**. The transition to **Python** was undertaken to leverage open-source data science libraries (Pandas, SciPy) and to enhance reproducibility.
+
 This project implements a complete computational pipeline to estimate the **Term Structure of Interest Rates** for Italian Government Bonds (BTP). It applies parametric models (**Nelson-Siegel** and **Nelson-Siegel-Svensson**) to calibrate the yield curve against observed market prices.
 
 The pipeline automatically performs:
