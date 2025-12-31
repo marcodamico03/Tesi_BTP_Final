@@ -197,3 +197,26 @@ def plot_specific_curves_nss(df_results):
     plt.savefig(os.path.join(config.OUTPUT_DIR, "Fig_NSS_SelectedDays.png"), dpi=300)
     plt.close()
     print("(Saved: NSS Selected Days Plot)")
+
+def plot_comparison_ns_nss_single(params_ns, params_nss, date_str):
+    """Confronto diretto NS vs NSS per il giorno singolo (Curve Sovrapposte)"""
+    maturities = np.linspace(0.5, 30, 100)
+
+    # Calcolo tassi
+    rates_ns = models.nelson_siegel_spot(maturities, *params_ns) * 100
+    rates_nss = models.nelson_siegel_svensson_spot(maturities, *params_nss) * 100
+
+    plt.figure()
+    plt.plot(maturities, rates_ns, label='Nelson-Siegel', color='blue', linestyle='--', linewidth=2)
+    plt.plot(maturities, rates_nss, label='Nelson-Siegel-Svensson', color='red', linestyle='-', linewidth=2)
+
+    plt.title(f'Yield Curve Comparison: NS vs NSS ({date_str})')
+    plt.xlabel('Maturity (Years)')
+    plt.ylabel('Spot Rate (%)')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+
+    filename = "Fig_Comparison_NS_NSS_Single.png"
+    plt.savefig(os.path.join(config.OUTPUT_DIR, filename), dpi=300)
+    plt.close()
+    print(f"(Saved: {filename})")
