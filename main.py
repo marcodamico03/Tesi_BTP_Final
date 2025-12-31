@@ -19,6 +19,8 @@ def run_single_day():
         # Fig 4 e 5
         plotting.plot_single_day_spot(p_ns, 'NS', config.T0_SINGLE.strftime('%d-%b-%Y'))
         plotting.plot_single_day_spot(p_nss, 'NSS', config.T0_SINGLE.strftime('%d-%b-%Y'))
+        # GRAFICO DI CONFRONTO DIRETTO
+        plotting.plot_comparison_ns_nss_single(p_ns, p_nss, config.T0_SINGLE.strftime('%d-%b-%Y'))
 
 def run_30_days():
     print(f"\n--- 4. TIME-SERIES ANALYSIS: 30 DAYS ---")
